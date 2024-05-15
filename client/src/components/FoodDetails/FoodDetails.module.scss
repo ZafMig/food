@@ -1,0 +1,116 @@
+$lightGray: #9E9B98;
+
+.Substrate {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 300;
+
+    .FoodDetails {
+        display: flex;
+        padding: 20px;
+        border-radius: 20px;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2);
+        width: 70vw;
+        height: 65vh;
+        overflow: auto;
+        transition: 0.4s all;
+        position: relative;
+
+        .LeftSide {
+            margin-right: 50px;
+
+            .Image {
+                width: 30vw;
+                height: 65vh;
+                border-radius: 20px;
+            }
+        }
+
+        .RightSide {
+            width: 100%;
+
+            .Name {
+                font-weight: 600;
+                font-size: 20px;
+                margin-bottom: 0.2rem;
+            }
+
+            .WeightPrice {
+                font-size: 16px;
+                font-weight: 500;
+                color: $lightGray;
+                margin-bottom: 2rem;
+            }
+
+            .Description {
+                height: 70%;
+
+                .Description_Title {
+                    font-weight: 400;
+                    color: $lightGray;
+                    margin-bottom: 0.5rem;
+                }
+
+                .Description_Text {
+                    font-size: 16.5px;
+                }
+            }
+
+            .PriceAddingButton {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+
+                .Price {
+                    width: 10vw;
+                    font-weight: 400;
+                    font-size: 28px;
+                }
+            }
+        }
+
+        .CloseIcon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 24px;
+            height: 24px;
+            opacity: 0.2;
+            cursor: pointer;
+            transition: opacity ease 0.5s;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                top: 10px;
+                display: block;
+                width: 24px;
+                height: 3px;
+                background: #000;
+            }
+
+            &::before {
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}

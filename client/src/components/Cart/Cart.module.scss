@@ -1,0 +1,67 @@
+.Substrate {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 300;
+
+    .Cart {
+        padding: 20px;
+        border-radius: 20px;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2);
+        width: 50vw;
+        height: auto;
+        max-height: 80vh;
+        overflow: auto;
+        transition: 0.4s all;
+
+        &::-webkit-scrollbar {
+            width: 0;
+            background: transparent;
+        }
+
+        .Header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+
+            .Cart_Title {
+                font-weight: 400;
+            }
+
+            .Clear_Title {
+                cursor: pointer;
+                font-weight: 300;
+                color: #67666D;
+            }
+        }
+
+        .CartItems {
+            margin-bottom: 20px;
+        }
+
+        .EmptyCart {
+            display: flex;
+            flex-direction: column;
+            padding: 2rem 0rem;
+            justify-content: center;
+            align-items: center;
+
+            .EmptyCart_Img {
+                margin-bottom: 2rem;
+            }
+
+            .EmptyCart_Title {
+                font-weight: 300;
+                color: #67666D;
+            }
+        }
+    }
+}

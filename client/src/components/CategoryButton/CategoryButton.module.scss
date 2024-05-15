@@ -1,0 +1,18 @@
+.CategoryButton {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+    transition: 1s;
+    border-radius: 20px;
+    text-align: center;
+    
+    &:hover {
+        box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+        transition-duration: .1s; 
+    }
+
+    .Image {
+        border-radius: 180px;
+        width: 65px;
+        height: 65px;
+    }
+}
